@@ -19,4 +19,28 @@ def wielomian_epsilon(a,b, tab, e):
 
     return (a+b)/2
 
-print(wielomian_epsilon(-10, 10, [1,-3,2,-6], 0.0001))
+def wielomian_iter(a,b, tab, stop):
+    i = 0
+    if horner.horner(a, tab) == 0.0:
+        return a
+    if horner.horner(b, tab) == 0.0:
+        return b
+
+    while i < stop:
+        mid = (a + b) / 2
+
+        if horner.horner(mid, tab) == 0.0:
+            return mid
+
+        if horner.horner(a,tab)*horner.horner(mid,tab) < 0.0:
+            b = mid
+        else:
+            a = mid
+        i+=1
+
+    return (a+b)/2
+
+
+
+print(wielomian_epsilon(-10, 10, [1,-3,2,-6], 0.00000001))
+print(wielomian_iter(-10, 10, [1,-3,2,-6], 20))
