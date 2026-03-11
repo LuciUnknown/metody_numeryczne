@@ -6,7 +6,7 @@ def sieczna_epsilon(a,b, tab, e):
     if horner.horner(b, tab) == 0.0:
         return b
 
-    while b - a > e:
+    while abs(b - a > e):
         f_a = horner.horner(a, tab)
         f_b = horner.horner(b, tab)
 
@@ -33,7 +33,7 @@ def sieczna_iter(a,b, tab, stop):
     if horner.horner(b, tab) == 0.0:
         return b
 
-    while i < stop:
+    while abs(i < stop):
         f_a = horner.horner(a, tab)
         f_b = horner.horner(b, tab)
 

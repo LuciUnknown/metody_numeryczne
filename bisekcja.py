@@ -6,7 +6,7 @@ def wielomian_epsilon(a,b, tab, e):
     if horner.horner(b, tab) == 0.0:
         return b
 
-    while b - a > e:
+    while abs(b - a > e):
         mid = (a + b) / 2
 
         if horner.horner(mid, tab) == 0.0:
@@ -26,7 +26,7 @@ def wielomian_iter(a,b, tab, stop):
     if horner.horner(b, tab) == 0.0:
         return b
 
-    while i < stop:
+    while abs(i < stop):
         mid = (a + b) / 2
 
         if horner.horner(mid, tab) == 0.0:
