@@ -60,7 +60,8 @@ def trygonometria_epsilon(a, b, f, e):
 
     while abs(b - a) >= e:
         mid = (a + b) / 2
-        if func == 0.0:
+
+        if func(mid) == 0.0:
             return mid
 
         if func(a) * func(mid) < 0.0:
