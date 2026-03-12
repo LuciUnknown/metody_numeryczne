@@ -27,7 +27,7 @@ def wielomian_iter(a,b, tab, stop):
     if horner.horner(b, tab) == 0.0:
         return b
 
-    while i < stop:
+    while abs(i < stop):
         mid = (a + b) / 2
 
         if horner.horner(mid, tab) == 0.0:
@@ -88,7 +88,7 @@ def trygonometria_iter(a, b, f, stop):
     if func(b) == 0.0:
         return b
 
-    while i < stop:
+    while abs(i < stop):
         mid = (a + b) / 2
         if func == 0.0:
             return mid
