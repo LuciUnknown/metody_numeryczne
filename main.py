@@ -19,4 +19,5 @@ if wybor_funkcji == 1:
     # else:
     #     print("Wybrano zły numer kryterium zatrzymania")
 
-# elif wybor_funkcji == 2 | wybor_funkcji == 3 | wybor_funkcji == 4:
+# elif wybor_funkcji == 3:
+# elif wybor_funkcji == 2 | wybor_funkcji == 4:
