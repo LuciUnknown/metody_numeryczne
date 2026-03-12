@@ -62,6 +62,8 @@ def trygonometria_epsilon(a, b, f, e):
         func = trygonometria.tan
     elif f == "ctan":
         func = trygonometria.ctan
+    else:
+        return
 
     if func(a) == 0.0:
         return a
