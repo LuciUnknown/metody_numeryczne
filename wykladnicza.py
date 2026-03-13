@@ -11,6 +11,3 @@ def wykladnicza(a,x, b):
             a/=b
             l+=1
     return l*x-p
-
-
-print(wykladnicza(25,2,125))
