@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def wykres(a, b, f):
-    x = np.linspace(a, b)
+    x = np.linspace(a, b, 200)
     y = []
     for i in x:
         y.append(f(i))

@@ -15,10 +15,12 @@ if wybor_funkcji == 1:
     if wybor2 == 1:
         e = float(input("Podaj oczekiwaną dokładność: "))
         print("Miejsce zerowe metodą bisekcji: ", bisekcja.epsilon(a,b,lambda x: trygonometria.sin(x) * trygonometria.cos(x), e))
+        print("Miejsce zerowe metodą siecznych: ", sieczna.epsilon(a, b, lambda x: trygonometria.sin(x) * trygonometria.cos(x), e))
 
     elif wybor2 == 2:
         top = int(input("Podaj liczbę iteracji: "))
-        print("Miejsce zerowe metodą bisekcji: ", bisekcja.epsilon(a, b, lambda x: trygonometria.sin(x) * trygonometria.cos(x), top))
+        print("Miejsce zerowe metodą bisekcji: ", bisekcja.iter(a, b, lambda x: trygonometria.sin(x) * trygonometria.cos(x), top))
+        print("Miejsce zerowe metodą siecznych: ", sieczna.iter(a, b, lambda x: trygonometria.sin(x) * trygonometria.cos(x), top))
 
     else:
         print("Wybrano zły numer kryterium zatrzymania")

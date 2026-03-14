@@ -1,6 +1,8 @@
 import horner
 import trygonometria
 import wykladnicza
+import wykres
+import math
 
 def epsilon(a, b, f, e):
     i = 0
@@ -52,3 +54,7 @@ print(iter(0.5, 10, lambda x: trygonometria.sin(x+0.3), 20))
 
 print(epsilon(-10, 10, lambda x: wykladnicza.wykladnicza(5,2*x, 125), 0.0001))
 print(iter(-10, 10, lambda x: wykladnicza.wykladnicza(5,2*x, 125), 20))
+
+print(epsilon(-5, 50, lambda x: math.exp(x)-5, 0.000001))
+
+wykres.wykres(-10, 10, lambda x: trygonometria.sin(x))
