@@ -47,7 +47,7 @@ def iter(a, b, f, stop):
 print(epsilon(-10, 10, lambda x: horner.horner(x, [1,-3,2,-6]), 0.00000001))
 print(iter(-10, 10, lambda x: horner.horner(x,[1,-3,2,-6]), 100))
 
-print(epsilon(0.5, 5,lambda x: trygonometria.sin(x)*trygonometria.cos(2*x), 0.00000001))
+print(epsilon(0.5, 5,lambda x: trygonometria.sin(2*x)*trygonometria.cos(2*x), 0.00000001))
 print(iter(0.5, 10, lambda x: trygonometria.sin(x+0.3), 20))
 
 print(epsilon(-10, 10, lambda x: wykladnicza.wykladnicza(5,2*x, 125), 0.0001))
