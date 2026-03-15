@@ -50,7 +50,7 @@ elif wybor_funkcji == 2:
 elif wybor_funkcji == 3:
     a = int(input("Podaj początek przedziału (a)"))
     b = int(input("Podaj koniec przedziału (b)"))
-    tab = [input("Podaj współczynniki x od największego")]
+    tab = list(map(int,input("Podaj współczynniki x od największego").split(",")))
 
     if wybor2 == 1:
         e = float(input("Podaj oczekiwaną dokładność: "))
@@ -76,7 +76,7 @@ elif wybor_funkcji == 4:
     zlozenie2 = int(input("Wybierz drugą funkcje nieliniową do złożenia: \n1. Trygonometryczna \n2. Wielomian \n3. Wykładnicza"))
 
     if zlozenie1 == 2 or zlozenie1 == 3:
-        tab = [input("Podaj współczynniki x od największego")]
+        tab = list(map(int, input("Podaj współczynniki x od największego").split(",")))
 
     elif zlozenie1 < 1 or zlozenie1 > 3:
         zlozenie2 = 0
@@ -86,7 +86,7 @@ elif wybor_funkcji == 4:
     if zlozenie2 == 1:
         funkcja = lambda x: trygonometria.sin(x) * trygonometria.cos(x)
     elif zlozenie2 == 2 or zlozenie2 == 3:
-        tab = [input("Podaj współczynniki x od największego")]
+        tab = list(map(int,input("Podaj współczynniki x od największego").split(",")))
         if zlozenie2 == 2:
             funkcja = lambda x: horner.horner(x, tab)
         if zlozenie2 == 3:
