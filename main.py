@@ -29,7 +29,7 @@ if wybor_funkcji == 1:
 elif wybor_funkcji == 2:
     a = int(input("Podaj początek przedziału (a)"))
     b = int(input("Podaj koniec przedziału (b)"))
-    tab = [input("Podaj współczynniki x od największego")]
+    tab = list(map(int, input("Podaj współczynniki x od największego").split(",")))
 
     if wybor2 == 1:
         e = float(input("Podaj oczekiwaną dokładność: "))
