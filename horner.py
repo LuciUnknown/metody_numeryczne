@@ -8,3 +8,9 @@ def horner(x, tab):
         else:
             result.append(x*result[i-1]+tab[i])
     return result.pop()
+
+def y(x, tab):
+    wynik = 0
+    for i in range(len(tab)):
+        wynik += tab[i]*pow(x, len(tab)-i-1)
+    return wynik

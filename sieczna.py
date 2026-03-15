@@ -51,16 +51,3 @@ def iter(a,b, tab, stop):
         i+=1
 
     return b
-
-
-
-print(epsilon(-10, 10, lambda x: horner.horner(x,[1,-3,2,-6]), 0.00000001))
-print(iter(-10, 10,  lambda x: horner.horner(x,[1,-3,2,-6]), 20))
-
-print(iter(0.5, 5, lambda x: trygonometria.sin(2*x), 20))
-print(epsilon(0.5, 5,  lambda x: trygonometria.sin(2*x), 0.00000001))
-
-print(epsilon(-10, 10, lambda x: wykladnicza.wykladnicza(5,2*x, 125), 0.0001))
-print(iter(-10, 10, lambda x: wykladnicza.wykladnicza(5,2*x, 125), 20))
-
-wykres.wykres(-10, 10, lambda x: horner.horner(x,[1,-3,2,-6]))
