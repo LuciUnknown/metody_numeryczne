@@ -1,13 +1,13 @@
 import math
 
 def sin(x):
-    return float(math.sin(x))
+    return math.sin(x)
 
 def cos(x):
-    return float(math.cos(x))
+    return math.cos(x)
 
 def tan(x):
-    return round(math.tan(x), 3)
+    return math.tan(x)
 
 def ctan(x):
     return round(1/math.tan(x), 3)
