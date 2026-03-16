@@ -22,7 +22,9 @@ if wybor_funkcji == 1:
         wynik = bisekcja.epsilon(a,b,lambda x: trygonometria.sin(x) * trygonometria.cos(x), e)
         print("Miejsce zerowe metodą bisekcji: ", wynik[0])
         print("Wynik otrzymano po liczbie ", wynik[1], " iteracji")
-        print("Miejsce zerowe metodą siecznych: ", sieczna.epsilon(a, b, lambda x: trygonometria.sin(x) * trygonometria.cos(x), e))
+        wynik = sieczna.epsilon(a, b, lambda x: trygonometria.sin(x) * trygonometria.cos(x), e)
+        print("Miejsce zerowe metodą siecznych: ", wynik[0])
+        print("Wynik otrzymano po liczbie ", wynik[1], " iteracji")
         wykres.wykres(a, b, lambda x: trygonometria.sin(x) * trygonometria.cos(x))
 
     elif wybor2 == 2:
@@ -47,7 +49,8 @@ elif wybor_funkcji == 2:
         print("Miejsce zerowe metodą bisekcji: ", wynik[0])
         print("Wynik otrzymano po liczbie ", wynik[1], " iteracji")
         wynik = sieczna.epsilon(a, b, lambda x:  horner.horner(x, tab), e)
-        print("Miejsce zerowe metodą siecznych: ", wynik)
+        print("Miejsce zerowe metodą siecznych: ", wynik[0])
+        print("Wynik otrzymano po liczbie ", wynik[1], " iteracji")
         wykres.wykres(a, b, lambda x:  horner.y(x, tab))
 
     elif wybor2 == 2:
@@ -55,7 +58,9 @@ elif wybor_funkcji == 2:
         wynik = bisekcja.iter(a,b, lambda x: horner.horner(x, tab), stop)
         print("Miejsce zerowe metodą bisekcji: ", wynik[0])
         print("Wynik otrzymano po liczbie ", wynik[1], " iteracji")
-        print("Miejsce zerowe metodą siecznych: ",sieczna.iter(a,b, lambda x: horner.horner(x, tab), stop))
+        wynik = sieczna.iter(a,b, lambda x: horner.horner(x, tab), stop)
+        print("Miejsce zerowe metodą siecznych: ", wynik[0])
+        print("Wynik otrzymano po liczbie ", wynik[1], " iteracji")
         wykres.wykres(a,b, lambda x: horner.y(x, tab))
 
     else:
@@ -71,7 +76,8 @@ elif wybor_funkcji == 3:
         print("Miejsce zerowe metodą bisekcji: ", wynik[0])
         print("Wynik otrzymano po liczbie ", wynik[1], " iteracji")
         wynik = sieczna.epsilon(a, b, lambda x: math.exp(x-3)-7, e)
-        print("Miejsce zerowe metodą siecznych: ", wynik)
+        print("Miejsce zerowe metodą siecznych: ", wynik[0])
+        print("Wynik otrzymano po liczbie ", wynik[1], " iteracji")
         wykres.wykres(a, b, lambda x: math.exp(x+3)-7)
 
     elif wybor2 == 2:
@@ -79,7 +85,9 @@ elif wybor_funkcji == 3:
         wynik = bisekcja.iter(a, b, lambda x: math.exp(x+3)-7, stop)
         print("Miejsce zerowe metodą bisekcji: ", wynik[0])
         print("Wynik otrzymano po liczbie ", wynik[1], " iteracji")
-        print("Miejsce zerowe metodą siecznych: ", sieczna.iter(a, b, lambda x: math.exp(x+3)-7, stop))
+        wynik = sieczna.iter(a, b, lambda x: math.exp(x+3)-7, stop)
+        print("Miejsce zerowe metodą siecznych: ", wynik[0])
+        print("Wynik otrzymano po liczbie ", wynik[1], " iteracji")
         wykres.wykres(a, b, lambda x: math.exp(x+3)-7)
 
     else:
@@ -120,8 +128,9 @@ elif wybor_funkcji == 4:
             wynik = bisekcja.epsilon(a, b, lambda x: trygonometria.sin(funkcja(x)) * trygonometria.cos(funkcja(x)), e)
             print("Miejsce zerowe metodą bisekcji: ", wynik[0])
             print("Wynik otrzymano po liczbie ", wynik[1], " iteracji")
-            print("Miejsce zerowe metodą siecznych: ",
-                  sieczna.epsilon(a, b, lambda x: trygonometria.sin(funkcja(x)) * trygonometria.cos(funkcja(x)), e))
+            wynik = sieczna.epsilon(a, b, lambda x: trygonometria.sin(funkcja(x)) * trygonometria.cos(funkcja(x)), e)
+            print("Miejsce zerowe metodą siecznych: ", wynik[0])
+            print("Wynik otrzymano po liczbie ", wynik[1], " iteracji")
             wykres.wykres(a, b, lambda x: trygonometria.sin(funkcja(x)) * trygonometria.cos(funkcja(x)))
 
         elif zlozenie1 == 2:
@@ -130,6 +139,7 @@ elif wybor_funkcji == 4:
             print("Wynik otrzymano po liczbie ", wynik[1], " iteracji")
             wynik = sieczna.epsilon(a, b, lambda x: horner.horner(funkcja(x), tab), e)
             print("Miejsce zerowe metodą siecznych: ", wynik[0])
+            print("Wynik otrzymano po liczbie ", wynik[1], " iteracji")
             wykres.wykres(a, b, lambda x: horner.y(funkcja(x), tab))
 
         elif zlozenie1 == 3:
@@ -137,7 +147,8 @@ elif wybor_funkcji == 4:
             print("Miejsce zerowe metodą bisekcji: ", wynik[0])
             print("Wynik otrzymano po liczbie ", wynik[1], " iteracji")
             wynik = sieczna.epsilon(a, b, lambda x: math.exp(funkcja(x)+3)-7, e)
-            print("Miejsce zerowe metodą siecznych: ", wynik)
+            print("Miejsce zerowe metodą siecznych: ", wynik[0])
+            print("Wynik otrzymano po liczbie ", wynik[1], " iteracji")
             wykres.wykres(a, b, lambda x: math.exp(funkcja(x)+3)-7)
 
 
@@ -154,7 +165,9 @@ elif wybor_funkcji == 4:
             wynik = bisekcja.iter(a, b, lambda x: horner.horner(funkcja(x), tab), stop)
             print("Miejsce zerowe metodą bisekcji: ", wynik[0])
             print("Wynik otrzymano po liczbie ", wynik[1], " iteracji")
-            print("Miejsce zerowe metodą siecznych: ", sieczna.iter(a, b, lambda x: horner.horner(funkcja(x), tab), stop))
+            wynik = sieczna.iter(a, b, lambda x: horner.horner(funkcja(x), tab), stop)
+            print("Miejsce zerowe metodą siecznych: ", wynik[0])
+            print("Wynik otrzymano po liczbie ", wynik[1], " iteracji")
             wykres.wykres(a, b, lambda x: horner.horner(funkcja(x), tab))
 
 
