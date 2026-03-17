@@ -113,7 +113,7 @@ try:
         zlozenie1 = int(input("Wybierz pierwszą funkcje nieliniową do złożenia: \n \n1. Wielomian \n2. Wykładnicza"))
         zlozenie2 = int(input("Wybierz drugą funkcje nieliniową do złożenia: \n1. Trygonometryczna \n2. Wielomian \n3. Wykładnicza"))
 
-        if zlozenie1 == 2:
+        if zlozenie1 == 1:
             tab = list(map(int, input("Podaj współczynniki x od największego").split(",")))
 
         elif zlozenie1 < 1 or zlozenie1 > 2:
@@ -149,14 +149,14 @@ try:
                 wykres.wykres(a, b, lambda x: horner.y(funkcja(x), tab), wynik[0], "sieczna")
 
             elif zlozenie1 == 2:
-                wynik = bisekcja.epsilon(a, b, lambda x: math.exp(funkcja(x)+3)-7, e)
+                wynik = bisekcja.epsilon(a, b, lambda x: math.exp(funkcja(x)+2)-7, e)
                 print("Miejsce zerowe metodą bisekcji: ", wynik[0])
                 print("Wynik otrzymano po liczbie ", wynik[1], " iteracji")
-                wykres.wykres(a, b, lambda x: math.exp(funkcja(x) + 3) - 7, wynik[0], "bisekcja")
-                wynik = sieczna.epsilon(a, b, lambda x: math.exp(funkcja(x)+3)-7, e)
+                wykres.wykres(a, b, lambda x: math.exp(funkcja(x) + 2) - 7, wynik[0], "bisekcja")
+                wynik = sieczna.epsilon(a, b, lambda x: math.exp(funkcja(x)+2)-7, e)
                 print("Miejsce zerowe metodą siecznych: ", wynik[0])
                 print("Wynik otrzymano po liczbie ", wynik[1], " iteracji")
-                wykres.wykres(a, b, lambda x: math.exp(funkcja(x)+3)-7, wynik[0], "sieczna")
+                wykres.wykres(a, b, lambda x: math.exp(funkcja(x)+2)-7, wynik[0], "sieczna")
 
 
         if wybor2 == 2:
@@ -174,14 +174,14 @@ try:
 
 
             elif zlozenie1 == 2:
-                wynik = bisekcja.iter(a, b, lambda x: math.exp(x+3)-7, stop)
+                wynik = bisekcja.iter(a, b, lambda x: math.exp(funkcja(x)+2)-7, stop)
                 print("Miejsce zerowe metodą bisekcji: ", wynik[0])
                 print("Wynik otrzymano po liczbie ", wynik[1], " iteracji")
-                wykres.wykres(a, b, lambda x: math.exp(funkcja(x + 3) - 7), wynik[0], "bisekcja")
-                wynik = sieczna.iter(a, b, lambda x: math.exp(x+3)-7, stop)
+                wykres.wykres(a, b, lambda x: math.exp(funkcja(x)+2)-7, wynik[0], "bisekcja")
+                wynik = sieczna.iter(a, b, lambda x: math.exp(funkcja(x)+2)-7, stop)
                 print("Miejsce zerowe metodą siecznych: ", wynik[0])
                 print("Wynik otrzymano po liczbie ", wynik[1], " iteracji")
-                wykres.wykres(a, b, lambda x: math.exp(funkcja(x+3)-7), wynik[0], "sieczna")
+                wykres.wykres(a, b, lambda x: math.exp(funkcja(x)+2)-7, wynik[0], "sieczna")
         else:
             if wybor2 == 0:
                 print("")
