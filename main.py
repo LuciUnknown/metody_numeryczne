@@ -86,7 +86,7 @@ try:
             print("Miejsce zerowe metodą bisekcji: ", wynik[0])
             print("Wynik otrzymano po liczbie ", wynik[1], " iteracji")
             wykres.wykres(a, b, lambda x: math.exp(x + 3) - 7, wynik[0], "bisekcja")
-            wynik = sieczna.epsilon(a, b, lambda x: math.exp(x-3)-7, e)
+            wynik = sieczna.epsilon(a, b, lambda x: math.exp(x+3)-7, e)
             print("Miejsce zerowe metodą siecznych: ", wynik[0])
             print("Wynik otrzymano po liczbie ", wynik[1], " iteracji")
             wykres.wykres(a, b, lambda x: math.exp(x+3)-7, wynik[0], "sieczna")
