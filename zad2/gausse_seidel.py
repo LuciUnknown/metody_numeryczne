@@ -46,5 +46,3 @@ def acc_Gauss_Seidel(A, b, tol):
             print("Przerwano: przekroczono 1000 iteracji (możliwy brak zbieżności).")
             return x
 
-    return x
-
