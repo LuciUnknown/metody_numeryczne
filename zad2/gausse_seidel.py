@@ -1,8 +1,13 @@
 import numpy as np
 
+#domianta nie dziala
+
 def diag_dominacja(A):
+    print(A)
     D = np.abs(np.diag(A))
-    S = np.sum(np.abs(A), axis=1) - D
+    S = np.abs(A) - np.diag(D)
+    print(S)
+    print(np.all(D > S, axis=1))
     if np.all(D > S):
         print("Sukces: Macierz jest silnie diagonalnie dominująca (zbieżność gwarantowana).")
         return True
