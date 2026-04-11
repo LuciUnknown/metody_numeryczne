@@ -2,8 +2,8 @@ import rozwiazanie
 
 print("Co chcesz zrobić? \n 1. Pojedyńczy przykład \n 2. Więcej niż jeden, mniej niż wszystkie  \n 3. Wszystkie \n 4. inny przykład")
 wybor = int(input("Podaj wybor: "))
-print("Wybierz warunek stopu \n 1. liczba iteracji \n 2. dokładność")
-war_stop = int(input("Podaj warunek stopu: "))
+print("Podaj warunek stopu (liczba całkowita to ilość iteracji, niecałkowita to dokładność")
+war_stop = float(input("Podaj warunek stopu: "))
 if wybor == 1:
     print("Podaj który przykład chcesz by był rozwiązany (1-10)")
     wybor2 = int(input("Podaj wybor: "))

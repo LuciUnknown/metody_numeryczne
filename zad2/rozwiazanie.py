@@ -22,13 +22,10 @@ def rozwiaz_przyklad(numer,war_stop):
         b = np.array(b)
 
         if gausse_seidel.diag_dominacja(A):
-
-            if war_stop == 1:
-                iteracje = int(input("Podaj liczbę iteracji: "))
-                wynik = gausse_seidel.iter_Gauss_Seidel(A, b, max_iter=iteracje)
-            elif war_stop == 2:
-                epsilon = float(input("Podaj dokładność: "))
-                wynik = gausse_seidel.acc_Gauss_Seidel(A, b, tol=epsilon)
+            if int(war_stop) == 0:
+                wynik = gausse_seidel.acc_Gauss_Seidel(A, b, tol=war_stop)
+            else:
+                wynik = gausse_seidel.iter_Gauss_Seidel(A, b, max_iter=int(war_stop))
             print("Znalezione rozwiązanie (x):", wynik)
 
     except FileNotFoundError:
