@@ -9,7 +9,7 @@ def wybierz_funkcje():
     print("1. Funkcja liniowa (ax + b)")
     print("2. Wartość bezwzględna (|x|)")
     print("3. Wielomian")
-    print("4. Funkcja trygonometryczna (np. sin, cos)")
+    print("4. Funkcja trygonometryczna (sin, cos)")
     print("5. Złożenie funkcji (trygonometryczna z liniową)")
     
     wybor = input("Wybierz numer (1-5): ")
@@ -31,13 +31,13 @@ def wybierz_funkcje():
         def f_zewn(arg): return funkcje.wielomian(w, arg)
             
     elif wybor == '4':
-        f = input("Podaj nazwę funkcji trygonometrycznej (np. sin, cos, tan): ")
+        f = input("Podaj nazwę funkcji trygonometrycznej (sin, cos): ")
         nazwa = f"Trygonometryczna: {f}(x)"
         def f_zewn(arg): return funkcje.trygonometryczna(f, arg)
             
     elif wybor == '5':
         print("Złożenie: f(g(x)), gdzie f - trygonometryczna, g - liniowa (ax + b)")
-        f = input("Podaj nazwę zewnętrznej funkcji trygonometrycznej (np. sin): ")
+        f = input("Podaj nazwę zewnętrznej funkcji trygonometrycznej (sin, cos): ")
         a = float(input("Podaj 'a' dla wewnętrznej funkcji liniowej: "))
         b = float(input("Podaj 'b' dla wewnętrznej funkcji liniowej: "))
         nazwa = f"Złożenie: {f}({a}x + {b})"
