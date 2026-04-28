@@ -8,7 +8,7 @@ def bezwzgledna(arg):
     return [abs(x) for x in arg]
 
 def wielomian(w,arg):
-    return [horner.wynik(arg, w) for x in arg]
+    return [horner.wynik(x, w) for x in arg]
 
 def trygonometryczna(f, arg):
     return [getattr(math, f)(x) for x in arg]

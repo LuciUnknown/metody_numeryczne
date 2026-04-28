@@ -8,7 +8,9 @@ def iloraz_roznicowy(x, y):
     return coef
 
 
-def newton(x, coef, t):
+def newton(x, y, t):
+    coef = iloraz_roznicowy(x, y)
+
     n = len(coef)
 
     result = coef[0]
@@ -18,3 +20,4 @@ def newton(x, coef, t):
         nawiasy *= (t - x[i-1])
         result += coef[i] * nawiasy
     return result
+
