@@ -7,7 +7,7 @@ def funkcja_podcalkowa(val):
     if val == '1':
         return lambda x: np.sin(x) + x ** 2
     elif val == '2':
-        return lambda x: pow(x, 3) - 2*pow(x, 1) + 5
+        return lambda x: pow(x, 5) + pow(x, 2)
     elif val == '3':
         return lambda x: np.sqrt(x)
 
@@ -19,7 +19,7 @@ def main():
         print("\n=== Menu Całkowania Numerycznego ===")
         print("Wybierz funkcje")
         print("1. f(x) = sin(x) + x^2")
-        print("2. f(x) = (x^3 - 2x + 5)")
+        print("2. f(x) = (x^5 + x^2)")
         print("3. f(x) = sqrt(x)")
 
         fun = input("Wybierz numer funkcji (1-2): ")
