@@ -16,3 +16,5 @@ def legrande(n, x):
 
     return p
 
+def transform(a, b, x):
+    return (2*x-a-b)/(b-a)
